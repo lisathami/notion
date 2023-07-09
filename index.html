@@ -4,7 +4,7 @@
     <style>
 #lbl {
     font-family: sans-serif;
-    font-size: x-large;
+    font-size: large;
     font-weight: bold;
     color: #e6e9f0;
     padding: 5px;
@@ -16,7 +16,7 @@
 
 }
 #date{
-    font-size: normal;
+    font-size: small;
 }
 body{
     background-color: #191919;
@@ -46,11 +46,11 @@ body{
     var greet;
 
     if (hrs < 12)
-        greet = 'Good Morning  ';
+        greet = 'Good Morning, Lisa  ';
     else if (hrs >= 12 && hrs <= 17)
-        greet = 'Good Afternoon ';
+        greet = 'Good Afternoon, Lisa ';
     else if (hrs >= 17 && hrs <= 24)
-        greet = 'Good Evening  ';
+        greet = 'Good Evening, Lisa  ';
 
     document.getElementById('lbl').innerHTML =
         greet +=`<div id="date"> Today is ${date}</div>`;
