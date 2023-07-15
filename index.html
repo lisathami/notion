@@ -49,11 +49,11 @@ body{
     var date_number = today.getDate()  ;
     
     var date_end;
-     if (date_number == 1||21||31)
+     if (date_number == 1||date_number == 21||date_number == 31)
         date_end = 'st  ';
-    else if (date_number == 2||22)
+    else if (date_number == 2||date_number == 22)
          date_end = 'nd  ';
-    else if (date_number == 3||23)
+    else if (date_number == 3||date_number == 23)
          date_end = 'rd  ';
      else 
          date_end = 'th  ';
