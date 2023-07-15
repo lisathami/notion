@@ -46,11 +46,23 @@ body{
     var dayOfWeek = weekday[today.getDay()];
     const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
     let month_name = month[today.getMonth()];
-    var date = dayOfWeek+" " + today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
+    var date_number = today.getDate()  ;
+    
+    var date_end;
+     if (date_number == 1||21||31)
+        date_end = 'st  ';
+    else if (date_number == 2||22)
+         date_end = 'nd  ';
+    else if (date_number == 3||23)
+         date_end = 'rd  ';
+     else 
+         date_end = 'th  ';
+    
+    var date = dayOfWeek+", " + month_name + " " + date_number + date_end ;
     var date_statement = `<div id="date"> Today is ${date}</div>` /*added*/
     var line2 = `<div id="date_statement"> ${date_statement}</div>` ;
+    
     var greet;
-
     if (hrs < 12)
         greet = 'Good Morning, Lisa  ';
     else if (hrs >= 12 && hrs <= 17)
