@@ -47,6 +47,7 @@ body{
     const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
     let month_name = month[today.getMonth()];
     var date_number = today.getDate()  ;
+    var pattern = '୧‿︵‿༺༻‿︵‿୨  ' ;
     
     var date_end;
      if (date_number == 1||date_number == 21||date_number == 31)
@@ -71,6 +72,6 @@ body{
         greet = 'Good Evening, Lisa  ';
 
     document.getElementById('lbl').innerHTML =
-        greet += line2; /*edited*/
+        greet += line2 += pattern; /*edited*/
 </script> 
 </html>
